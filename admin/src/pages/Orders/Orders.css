@@ -1,0 +1,120 @@
+/* Orders.css */
+
+.order1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.order1 h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.order1-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order1-item {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.order1-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.order1-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.order1-item div {
+  flex-grow: 1;
+}
+
+.order1-item-food {
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.order1-user-name {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.order1-user-address,
+.order1-user-address p,
+.order1-user-phone {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.order1-item select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  color: #333;
+  background-color: #ffe8e2;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.order1-item p{
+  margin-right: 10px;
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+  .order1-item {
+    grid-template-columns: 0.7fr 1.5fr 1fr 1fr; /* Adjust columns for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .order1-item {
+    grid-template-columns: 1fr 1fr; /* Stack in two columns for tablet screens */
+    grid-template-rows: auto auto;
+    row-gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .order1-item {
+    grid-template-columns: 1fr; /* Stack all in one column for mobile screens */
+    row-gap: 12px;
+  }
+
+  .order1 h3 {
+    font-size: 20px;
+  }
+
+  .order1-item-food,
+  .order1-user-name,
+  .order1-user-address p,
+  .order1-user-phone {
+    font-size: 13px;
+  }
+
+  .order1-item select {
+    font-size: 13px;
+  }
+}
